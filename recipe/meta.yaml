@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/stardist/stardist/archive/refs/tags/{{ version }}.tar.gz
   sha256: fbab3a60fb38f48b4136c7617f782772a466d85c7e33b4c3895a639cc68314b5
-  patches:
-    - setup.patch  # [osx]
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -51,10 +49,8 @@ about:
   license_file:
     - LICENSE.txt
     - stardist/lib/external/qhull_src/COPYING.txt
-    # - stardist/lib/external/clipper # MISSING in repo!
-    - clipper.LICENSE.txt
-    # - stardist/lib/external/nanoflann # MISSING in repo!
-    - nanoflann.LICENSE.txt
+    - stardist/lib/external/clipper/LICENSE.txt
+    - stardist/lib/external/nanoflann/LICENSE.txt
 
 extra:
   recipe-maintainers:
