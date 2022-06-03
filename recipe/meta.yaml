@@ -1,5 +1,5 @@
 {% set name = "stardist" %}
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/stardist/stardist/archive/refs/tags/{{ version }}.tar.gz
-  sha256: fbab3a60fb38f48b4136c7617f782772a466d85c7e33b4c3895a639cc68314b5
+  sha256: 271acab1bcde623dac61e1a01479376ee5f43fc19820a56acdff86a1aa4f93d0
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
