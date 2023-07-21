@@ -1,5 +1,5 @@
 {% set name = "stardist" %}
-{% set version = "0.8.3" %}
+{% set version = "0.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/stardist/stardist/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 271acab1bcde623dac61e1a01479376ee5f43fc19820a56acdff86a1aa4f93d0
+  sha256: 1941021fdaef55bcb1aa8c08bd28be83ca3a52ad17879b496cdfe13f1dab1a3e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -29,7 +29,7 @@ requirements:
     - python
     - setuptools
   run:
-    - csbdeep >=0.6.3
+    - csbdeep >=0.7.4
     - numba
     - python
     - scikit-image
@@ -48,7 +48,7 @@ test:
 about:
   home: https://github.com/stardist/stardist
   summary: StarDist
-  license: MIT
+  license: BSD-3-Clause
   license_file:
     - LICENSE.txt
     - stardist/lib/external/qhull_src/COPYING.txt
