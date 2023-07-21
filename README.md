@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stardist-feedst
 
 Home: https://github.com/stardist/stardist
 
-Package license: MIT
+Package license: BSD-3-Clause
 
 Summary: StarDist
 
