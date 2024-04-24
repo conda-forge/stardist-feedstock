@@ -1,5 +1,5 @@
 {% set name = "stardist" %}
-{% set version = "0.8.5" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/stardist/stardist/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 1941021fdaef55bcb1aa8c08bd28be83ca3a52ad17879b496cdfe13f1dab1a3e
+  sha256: 9083c9ee81fb8389ad7262f870121e480095e6d90d1b7c3285e13908151bbda1
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make
     - llvm-openmp  # [osx]
