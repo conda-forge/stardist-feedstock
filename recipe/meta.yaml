@@ -30,7 +30,7 @@ requirements:
     - python
     - setuptools
   run:
-    - csbdeep >=0.7.4
+    - csbdeep >=0.8.0
     - numba
     - python
     - scikit-image
