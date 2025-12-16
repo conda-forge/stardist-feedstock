@@ -10,6 +10,7 @@ source:
   sha256: af12ed0ca0e8a84d7c33a834b5a07df1a408d0cf97f76f503485ba11846e46d7
 
 build:
+  skip: true  # [py==313]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -30,7 +31,7 @@ requirements:
     - python
     - setuptools
   run:
-    - csbdeep >=0.8.0
+    - csbdeep >=0.8.2
     - numba
     - python
     - scikit-image
